@@ -17,7 +17,7 @@ var componentForm = {
 
 export const initMap = (lat, lng, zoom) => {
   var myLatLng = { lat: lat || -25.363, lng: lng || 131.044 };
-
+  
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: zoom || 4,
     center: myLatLng
@@ -26,7 +26,7 @@ export const initMap = (lat, lng, zoom) => {
   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
-    title: 'Hello World!'
+    title: 'My Location'
   });
 }
 
@@ -76,10 +76,12 @@ export const geolocate = () => {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
+      
       var circle = new google.maps.Circle({
         center: geolocation,
         radius: position.coords.accuracy
       });
+
       autocomplete.setBounds(circle.getBounds());
     });
   }

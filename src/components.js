@@ -1,33 +1,24 @@
 import $ from 'jquery';
 import { geolocate, initAutocomplete, initMap } from './places';
 
-export const mapContainer = () => {
-  var div = document.createElement('div');
-  div.id = 'map';
-
-  $(div).ready(function (e) {
-    console.log('loaded map');
-    initMap();
-  });
-
-  return div;
-}
-
 export const inputContainer = () => {
   var div = document.createElement('div');
   var input = document.createElement('input');
 
   div.id = 'locationField';
+
   input.id = 'autocomplete';
   input.type = 'text';
   input.placeholder = 'Enter your address';
   input.onfocus = function () {
     geolocate();
   };
+
   $(input).ready(function () {
     console.log('loaded input');
     initAutocomplete();
   })
+
   div.appendChild(input);
 
   return div;
@@ -35,7 +26,6 @@ export const inputContainer = () => {
 
 export const formContainer = () => {
   let div = document.createElement('div');
-  div.id = 'address';
 
   $(div).ready(function (e) {
     console.log('loaded form');
@@ -69,6 +59,18 @@ export const formContainer = () => {
               id="country" disabled="true"></input></td>
       </tr>
     </table>`
+
+  return div;
+}
+
+export const mapContainer = () => {
+  var div = document.createElement('div');
+  div.id = 'map';
+
+  $(div).ready(function (e) {
+    console.log('loaded map');
+    initMap();
+  });
 
   return div;
 }

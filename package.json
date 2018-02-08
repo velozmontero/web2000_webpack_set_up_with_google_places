@@ -8,7 +8,7 @@
     "build": "webpack",
     "start": "webpack-dev-server"
   },
-  "keywords": [],
+  "keywords": ["Google Maps", "Google Places"],
   "author": "Frank Veloz",
   "license": "ISC",
   "devDependencies": {
