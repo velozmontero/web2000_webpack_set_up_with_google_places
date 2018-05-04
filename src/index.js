@@ -2,7 +2,7 @@ import $ from 'jquery';
 import { API_KEY } from './config';
 import { inputContainer, formContainer, mapContainer } from './components';
 
-let script = document.createElement('script');
+let script = document.createElement('script'); 
 script.id = 'google_api';
 script.async = true;
 script.defer = true;

@@ -15,9 +15,8 @@ export const inputContainer = () => {
   };
 
   $(input).ready(function () {
-    console.log('loaded input');
     initAutocomplete();
-  })
+  });
 
   div.appendChild(input);
 
@@ -58,7 +57,7 @@ export const formContainer = () => {
         <td class="wideField" colspan="3"><input class="field"
               id="country" disabled="true"></input></td>
       </tr>
-    </table>`
+    </table>`;
 
   return div;
 }
@@ -68,7 +67,7 @@ export const mapContainer = () => {
   div.id = 'map';
 
   $(div).ready(function (e) {
-    console.log('loaded map');
+    // console.log('loaded map');
     initMap();
   });
 

@@ -47,7 +47,7 @@ export const fillInAddress = () => {
   var place = autocomplete.getPlace();
 
   if(place){
-    console.log('place', place.geometry.location.lat(), place.geometry.location.lng());
+    // console.log('place', place.geometry.location.lat(), place.geometry.location.lng());
     initMap(place.geometry.location.lat(), place.geometry.location.lng(), 15);
   }
 
